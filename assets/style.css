@@ -1,0 +1,225 @@
+html{
+    font-size: 16px;
+    font-family:cursive;
+}
+
+*, ::after,::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    height: 400px;
+    background-image: url("https://images.pexels.com/photos/3805983/pexels-photo-3805983.jpeg?auto=compress&cs=tinysrgb&w=2000&h=4000&dpr=1.png");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+h3, h4{
+    margin-bottom: 1rem; 
+}
+
+.container{
+    font-size: small;
+    background-color: #2b3232;
+    display: flex;
+    flex-direction: row-reverse;
+    height: 340px;
+    justify-content:left;
+    align-items: left;
+    margin: 0px 50px 0 50px ;
+    order: 2;
+    border: 1px solid salmon;
+}
+
+/* .container1{
+    font-size: small;
+    background-color: #2b3232;
+    display: flex;
+    flex-direction: row;
+    height: 340px;
+    justify-content:left;
+    align-items: left;
+    margin: 0px 50px 0 50px ;
+} */
+
+.container__info{
+    margin-left: 10px;
+}
+
+.container img{
+  width: 100%;
+  justify-content:right;
+  align-items: right;
+  border: 2px solid salmon;
+  height: 100%;
+  object-fit:contain;
+}
+
+.container__h4{
+    margin-top: 40px;
+}
+
+nav{
+    background-color: #2b3232;
+    width: 100%;
+}
+.nav__responsive-ul{
+    display: none;
+    
+}
+.nav__li{
+    display: inline-block;
+    padding: 12px;
+    color: #465050;
+}
+.nav__li:hover>a {
+  
+    color: #bad7d7da;
+}
+.nav__li a {
+    color:#fff;
+    text-decoration: none;
+}
+.nav__li i{
+    width: 30px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.nav__responsive-button-container{
+   position: absolute;
+   width: 100%;
+   font-size: 25px;
+   margin-top: -60px;
+   z-index: 100;
+}
+.nav__responsive-button{
+    /* padding: 6px 20px 0px 0px; */
+    text-align: right;
+    width: 100%;
+    background-color: #2b3232;
+    border-style:solid;
+    border-radius: 5px;
+}
+header {
+    margin: 50px 50px 0 50px ;
+    position: static;
+    border: 1px solid #2b3232;
+    border-radius: 10px 10px 0 0;
+    width: calc(100%-50px);
+    height: 4rem;
+    background-color: #2b3232;  
+}
+
+footer{
+    margin: 0px 50px 0 50px ;
+    position: static;
+    border: 1px solid #2b3232;
+    border-radius: 0 0 10px 10px;
+    width: calc(100%-50px);
+    height: 4rem;
+    background-color: #2b3232;
+    text-align: center;
+}
+
+@media (max-width: 425px) {
+    .container{
+    font-size: x-small;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column
+    }
+    .container__info{
+        justify-content: left;
+    }
+    .container__img {
+    width: 30px;
+    height:2px;
+    
+    }
+    .nav{
+        height: 37px;
+        width: 100%;
+        border-radius: 10px 10px 0 0; 
+    }
+    .nav__ul{
+        display: none;
+    }
+    
+    .nav__responsive-ul{
+        display: block;
+        position: absolute;
+        height: 50%;
+        
+        margin-top:37px; 
+        padding-top:27px;
+        
+        
+        width:75%;
+        /* justify-content: left; */
+        
+        
+    }
+    .nav__li-container{
+        position: relative;
+        z-index: 1;
+        overflow-y: auto;
+        background-color: #2b3232;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .visible {
+        opacity: 1;
+        visibility: visible;
+        background-color:#1e1e1e;
+        transition:1s ;
+    }
+
+    .nav__responsive-li{
+        width: 100%;
+        padding: 9px 20px;
+    }
+    .nav__responsive-li i{
+        box-sizing: border-box;
+        text-align: center;
+        margin-right:5px ;
+        width: 30px;
+        color:#000;
+    }
+    .nav__responsive-li a{
+        color: #fefefe;
+        text-decoration: none;
+    }
+}
+
+@media (max-width:375px) {
+    .nav__responsive-ul{
+        width:73%;
+    }
+    
+}
+@media (max-width:320px){
+    .nav__responsive-ul{
+        width:68%;
+    }
+    
+}
+@media (max-width: 768px) {
+    .container{
+    font-size: x-small;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    flex-direction: row-reverse;
+    }
+    .container__img{
+        width: 100%;
+        height: 100%;
+       
+    }
+}
